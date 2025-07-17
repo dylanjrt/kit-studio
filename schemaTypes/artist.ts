@@ -96,8 +96,9 @@ export default defineType({
     defineField({
       name: 'location',
       title: 'Location',
-      type: 'string',
-      description: 'City, State/Province, Country',
+      type: 'text',
+      rows: 3,
+      description: 'Full address or multiline location (e.g. street, city, phone)',
     }),
     defineField({
       name: 'email',
