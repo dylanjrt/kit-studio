@@ -29,6 +29,22 @@ export default defineType({
       description: 'Large full-bleed image at the top of the home page.',
     }),
     defineField({
+      name: 'secondaryImage',
+      title: 'Secondary Image',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alternative text',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+        },
+        {name: 'caption', title: 'Caption', type: 'string'},
+      ],
+      description: 'An additional image to display on the home page.',
+    }),
+    defineField({
       name: 'intro',
       title: 'Intro',
       type: 'array',
